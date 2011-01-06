@@ -1,0 +1,10 @@
+<% if !@todos.empty? %>
+<table id="todoItems">
+	<tr><th>Item</th><th>Created At</th></tr>
+	<% for item in @todos %>
+		<tr><td><%= item.description %></td><td><%= item.created_at%></td></tr>
+	<% end %>
+</table>
+<% else %>
+You're all done!
+<% end %>
