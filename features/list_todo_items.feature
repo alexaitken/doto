@@ -10,7 +10,7 @@ Feature: List todo items
 
   Scenario: To do list with items
     Given there are only the following todo items:
-		| item | created_at |
+		| description | created_at |
 		| get milk | 2010-11-06 12:00 |
 		| take out the trash |2010-03-16 12:00 |
 		| paint bedroom |2010-01-06 12:00 |

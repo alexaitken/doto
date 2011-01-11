@@ -1,10 +1,18 @@
+<div id="messages">
+	<%= flash[:notice] %>
+</div>
+
 <% if !@todos.empty? %>
 <table id="todoItems">
 	<tr><th>Item</th><th>Created At</th></tr>
 	<% for item in @todos %>
-		<tr><td><%= item.description %></td><td><%= item.created_at%></td></tr>
+		<tr class="<% if item.completed? %>completed<% end %>"><td><%= item.description %></td><td><%= item.created_at%></td></tr>
 	<% end %>
 </table>
 <% else %>
 You're all done!
 <% end %>
+
+<div>
+	<%= link_to("Add Item", new_todo_path)%>
+</div>

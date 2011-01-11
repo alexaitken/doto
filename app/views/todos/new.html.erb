@@ -1,0 +1,10 @@
+<% form_for @todo do |f| %>  
+  <p id="formErrors">
+	<%= @todo.errors.full_messages %>
+  </p>
+  <p>  
+    <%= f.label :description %><br />  
+    <%= f.text_area :description %>  
+  </p>  
+  <p><%= f.submit "Submit" %></p>  
+<% end %>

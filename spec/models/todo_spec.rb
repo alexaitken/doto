@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Todo do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+     it { should ensure_length_of(:description).
+                    is_at_least(1).
+                    is_at_most(500) }
+  
+  
 end
