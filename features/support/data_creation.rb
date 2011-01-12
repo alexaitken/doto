@@ -4,6 +4,16 @@ module DataCreation
     string  =  (0..number_of_characters).map{ o[rand(o.length)]  }.join;
   end
   
+  def delete_all_todos
+    Todo.delete_all
+  end  
+  
+  def create_todo(description, created)
+    Todo.create(:desciption => description, :created_at => created)
+  end
+
+  
+
 end
 
 World(DataCreation)
