@@ -9,7 +9,7 @@ module DataCreation
   end  
   
   def create_todo(description, created)
-    Todo.create(:desciption => description, :created_at => created)
+    Todo.create(:description => description, :created_at => created)
   end
 
   
