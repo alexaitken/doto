@@ -1,3 +1,5 @@
+require 'rbconfig'
+
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
@@ -16,10 +18,14 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.4"
+
+  gem 'capybara'
+  gem 'selenium-client'
   gem 'webrat'
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'shoulda'
+  gem 'pickle'
 end

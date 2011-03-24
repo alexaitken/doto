@@ -2,6 +2,7 @@
 	<%= flash[:notice] %>
 </div>
 
+<div id="todoList">
 <% if !@todos.empty? %>
 <table id="todoItems">
 	<tr><th>Item</th><th>Created At</th></tr>
@@ -12,6 +13,7 @@
 <% else %>
 You're all done!
 <% end %>
+</div>
 
 <div>
 	<%= link_to("Add Item", new_todo_path)%>
